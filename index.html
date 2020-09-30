@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/96c2ebbca9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Jquery script -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Nav script -->
+    <script type="text/javascript">
+      $(window).on("scroll", function () {
+        if ($(window).scrollTop()) {
+          $("nav").addClass("black");
+        } else {
+          $("nav").removeClass("black");
+        }
+      });
+    </script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Navigation bar -->
+    <nav>
+      <span
+        class="menu__icon"
+        style="font-size: 30px; cursor: pointer"
+        onclick="openNav()"
+        >&#9776;</span
+      >
+      <a href="#home__section" class="home_option"> <span>Jay Tan</span></a>
+      <ul>
+        <li><a href="#home__section" class="home_option">Home</a></li>
+        <li><a href="#about__section" class="home_option">About</a></li>
+        <li><a href="#service__section" class="home_option">Service</a></li>
+        <li><a href="#project__section" class="home_option">Project</a></li>
+        <li><a href="#resume__section" class="home_option">Resume</a></li>
+        <li><a href="#contact__section" class="home_option">Contact</a></li>
+      </ul>
+
+      <!-- Side navigation bar -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="#home__section">Home</a>
+        <a href="#about__section">About</a>
+        <a href="#service__section">Service</a>
+        <a href="#project__section">Project</a>
+        <a href="#resume__section">Resume</a>
+        <a href="#contact__section">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home__section" class="home__section">
+      <div class="home__container">
+        <span class="text__optionLineOne">Hello</span>
+        <span class="text__optionLineTwo anim-typewriter">
+          I am Jay Tan, a web developer.
+        </span>
+        <span class="text__optionLineThree">
+          DEVELOPER · DESIGNER · STUDENT
+        </span>
+        <!-- 4 Icons  -->
+        <div class="text__icon">
+          <!--Github -->
+          <a href="#" class="fa fa-github"></a>
+          <!-- LinkedIn -->
+          <a href="#" class="fa fa-linkedin"></a>
+          <!-- Facebook  -->
+          <a href="#" class="fa fa-facebook"></a>
+          <!-- Instagram -->
+          <a href="#" class="fa fa-instagram"></a>
+        </div>
+
+        <!-- Down arrow -->
+        <div class="home__arrow js-scroll-trigger">
+          <a href="#about__section">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about__section" class="about__section">
+      <div class="about__container">
+        <div class="about__info">
+          <h1>ABOUT ME</h1>
+          <br />
+          <div class="about__row row01__text">
+            <p>My name is Tan Yi Jie. I live in Malaysia.</p>
+          </div>
+          <div class="about__row row02__text">
+            <p>I am a web desginer, web developer, an engineer.</p>
+          </div>
+          <div class="about__row row03__text">
+            <p>
+              I am skilled in C, Python, Javascript, HTML, and CSS. I create
+              clean, functional, professional websites and desktop application.
+            </p>
+          </div>
+          <br />
+          <div class="about__row row04__text">
+            <p>
+              Think we could create something together? Feel free to drop me an
+              <a
+                class="link"
+                href="mailto:yijie2333@gmail.com"
+                alt=""
+                target="blank"
+              >
+                <strong>
+                  <i>email </i>
+                </strong>
+              </a>
+              or send me a message at
+              <a href="#contact__section" class="link"><i>here</i>.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Section -->
+    <section id="service__section" class="service__section">
+      <div class="service__container">
+        <h1>My Services</h1>
+        <p>
+          I can build clean, functional, and professional websites. I can build
+          functional GUI applications.
+        </p>
+        <div class="straight__line">
+          <p>|</p>
+        </div>
+      </div>
+      <div class="serviceProduct__row">
+        <div class="serviceProduct__info">
+          <div class="serviceProdict__text">
+            <i class="fas fa-window-maximize"></i>
+            <br />
+            <span>Web Development</span>
+            <br />
+            <p>Web UI/UX design</p>
+          </div>
+        </div>
+        <div class="serviceProduct__info">
+          <div class="serviceProdict__text">
+            <i class="fas fa-desktop"></i>
+            <br />
+            <span>Desktop Application</span>
+            <br />
+            <p>Python GUI application design</p>
+          </div>
+        </div>
+        <div class="serviceProduct__info">
+          <div class="serviceProdict__text">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <br />
+            <span>Online tutor</span>
+            <br />
+            <p>I provide online tutor on specific subjects.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="project__section" class="project__section">
+      <div class="project__top">
+        <h1>My Project</h1>
+        <p>These are the projects that I did.</p>
+        <div class="straight__line">
+          <p>|</p>
+        </div>
+      </div>
+
+      <!-- Project row 1-->
+      <div class="project__row01">
+        <div class="project__container">
+          <!-- Project image -->
+          <img
+            src="./assets/img/portfolio/amazon-clone.jpg"
+            alt=""
+            class="image"
+          />
+          <!-- Project link -->
+          <div class="overlay">
+            <div class="project__text">
+              <span>Amazon clone with React JS</span>
+            </div>
+          </div>
+          <div class="project__icon">
+            <a
+              href="https://github.com/Jayyyy123/react-amazon-clone"
+              class="fa fa-github"
+              alt=""
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+            <a
+              href="https://clone-ed944.web.app/"
+              class="far fa-eye"
+              alt=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            </a>
+          </div>
+        </div>
+        <div class="project__container">
+          <img
+            src="./assets/img/portfolio/python-ai.jpg"
+            alt=""
+            class="image"
+          />
+          <div class="overlay">
+            <div class="project__text">
+              <span>License plate recogniton with Python</span>
+            </div>
+          </div>
+          <div class="project__icon">
+            <a
+              href="https://github.com/Jayyyy123/license-plate-gui"
+              class="fa fa-github"
+              alt=""
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+            <a
+              href="https://imgur.com/gallery/NX9HOmt"
+              class="far fa-eye"
+              alt=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            </a>
+          </div>
+        </div>
+        <div class="project__container">
+          <img
+            src="./assets/img/portfolio/spotify-clone.JPG"
+            alt=""
+            class="image"
+          />
+          <div class="overlay">
+            <div class="project__text">Spotify clone with React JS</div>
+          </div>
+          <div class="project__icon">
+            <a
+              href="#"
+              class="fa fa-github"
+              alt=""
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+            <a
+              href="https://spotify-clone-d9259.web.app/"
+              class="far fa-eye"
+              alt=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project row 2 -->
+      <div class="project__row02">
+        <div class="project__container">
+          <img
+            src="./assets/img/portfolio/whatsapp-clone.jpg"
+            alt=""
+            class="image"
+          />
+          <div class="overlay">
+            <div class="project__text">Whatsapp clone with MERN stack</div>
+          </div>
+          <div class="project__icon">
+            <a
+              href="https://github.com/Jayyyy123/react-whatsapp-clone"
+              class="fa fa-github"
+              alt=""
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+            <a
+              href="https://whatsapp-mern-eb6c9.web.app/"
+              class="far fa-eye"
+              alt=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            </a>
+          </div>
+        </div>
+        <div class="project__container">
+          <img
+            src="./assets/img/portfolio/counter-app.jpg"
+            alt=""
+            class="image"
+          />
+          <div class="overlay">
+            <div class="project__text">
+              <span>Simple counter app with React JS</span>
+            </div>
+          </div>
+          <div class="project__icon">
+            <a
+              href="https://github.com/Jayyyy123/counter-app"
+              class="fa fa-github"
+              alt=""
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+            <a
+              href="https://jayyyy123.github.io/counter-app/"
+              class="far fa-eye"
+              alt=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            </a>
+          </div>
+        </div>
+        <div class="project__container">
+          <img
+            src="./assets/img/portfolio/k-trend.JPG"
+            alt=""
+            class="image"
+          />
+          <div class="overlay">
+            <div class="project__text">Music lyrics searching website(In process)</div>
+          </div>
+          <div class="project__icon">
+            <a
+              href="#"
+              class="fa fa-github"
+              alt=""
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+            <a
+              href="#"
+              class="far fa-eye"
+              alt=""
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume__section" class="resume__section">
+      <div class="resume__container">
+        <h1>My Resume</h1>
+        <p>This is my resume.</p>
+        <div class="straight__line">
+          <p>|</p>
+        </div>
+        <div class="resume__buttonRow">
+          <form
+            method="get"
+            action="https://drive.google.com/file/d/1GwKpIE3zyvYElarE6XsZ2wTuyWuVQEDv/view?usp=sharing"
+            target="_blank"
+          >
+            <button class="resume__button">
+              <span>Resume </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact__section" class="contact__section">
+      <div class="contact__container">
+        <h1>Contact me</h1>
+        <p>Keep in touch!</p>
+      </div>
+      <div class="contact__form">
+        <form>
+          <label>Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Write your name here."
+          />
+          <label>Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            required
+            placeholder="Write your email here."
+          />
+          <label>Message</label>
+          <textarea
+            class="message__textarea"
+            id="message"
+            name="message"
+            required
+            placeholder="Leave your message at here."
+          ></textarea>
+
+          <input type="submit" name="send" value="Send" />
+        </form>
+      </div>
+    </section>
+
+    <section id="footer">
+      Copyright &copy; 2020 All Rights Reserved by Tan Yi Jie
+    </section>
+  </body>
+</html>

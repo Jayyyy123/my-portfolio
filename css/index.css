@@ -1,0 +1,831 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 768px;
+  max-width: 100vw;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Home Section */
+/* Nav Section */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 10px 100px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+nav.black {
+  background: rgb(0, 0, 0);
+  height: 80px;
+  padding: 10px 40px 10px;
+  box-shadow: 0px 0px 5px 2px rgb(143, 146, 146);
+  border-bottom: 1px solid black;
+  z-index: 1;
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+}
+
+nav ul {
+  float: right;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  line-height: 80px;
+  color: #262626;
+  font-family: "Lato", sans-serif;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #e4717a;
+  border-bottom: 1px solid #e4717a;
+  transition: 0.5s;
+}
+
+nav span {
+  font-family: "Syne", sans-serif;
+  font-size: 34px;
+  color: white;
+  float: left;
+  display: flex;
+  height: 80px;
+  padding: 15px 40px 10px;
+  z-index: 1;
+}
+
+section.home__section {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(35, 41, 46, 0.74),
+      rgba(23, 34, 44, 0.74)
+    ),
+    url(../assets/img/portfolio/homepage.jpg);
+  background-size: cover;
+}
+
+section.about__section {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  background-size: cover;
+}
+
+section.service__section {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      to right,
+      #1d1818f6 0%,
+      rgba(10, 10, 10, 0.911) 100%
+    ),
+    url(../assets/img/portfolio/service-image.jpg);
+  padding-top: 60px;
+  background-size: cover;
+}
+
+section.project__section {
+  width: 100%;
+  position: relative;
+  height: fit-content;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+section.resume__section {
+  width: 100%;
+  height: 500px;
+  background-color: black;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+section.contact__section {
+  width: 100%;
+  position: relative;
+  height: 800px;
+  background-image: linear-gradient(
+      to right,
+      #1d1818f6 0%,
+      rgba(10, 10, 10, 0.452) 100%
+    ),
+    url(../assets/img/portfolio/contact-image.jpg);
+  padding-top: 120px;
+}
+
+.home__container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text__optionLineOne {
+  font-family: monospace;
+  font-size: 150px;
+  color: white;
+  margin: 40px;
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text__optionLineTwo {
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 10px;
+  color: white;
+  position: relative;
+  width: 20em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+.text__optionLineThree {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px;
+  margin-bottom: 20px;
+  color: white;
+  font-family: "Lato", sans-serif;
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+}
+
+.anim-typewriter {
+  animation: typewriter 2s steps(44) 1s 1 normal both,
+    blinkTextCursor 1s steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.text__icon a {
+  margin: 10px;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: 0.5s;
+  color: white;
+}
+
+.fa:hover {
+  opacity: 0.5;
+}
+
+.fa-github:hover {
+  color: #6e5494;
+}
+
+.fa-linkedin:hover {
+  color: #0e76a8;
+}
+
+.fa-facebook:hover {
+  color: #3b5998;
+}
+
+.fa-instagram:hover {
+  color: #fe4164;
+}
+
+.home__arrow {
+  position: absolute;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home__arrow span {
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 3s infinite;
+}
+
+.home__arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.home__arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+/* About Section */
+/* ############# */
+
+.about__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.about__info {
+  color: white;
+  margin-bottom: 200px;
+  width: 1000px;
+}
+
+.about__info > h1 {
+  margin: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 50px;
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+}
+
+.about__row {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 10px;
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+}
+
+.row01__text {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.row02__text {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.row03__text {
+  font-size: 20px;
+}
+
+.row04__text {
+  font-size: 18px;
+}
+
+.link {
+  font-weight: 600;
+  color: coral;
+  text-decoration: none;
+}
+.link:hover {
+  color: red;
+}
+
+/* Service section */
+/* ############### */
+
+.service__container {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 60px;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.service__container h1 {
+  font-size: 40px;
+  font-family: "Lato", sans-serif;
+}
+
+.service__container p {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+
+.serviceProduct__row {
+  display: flex;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceProduct__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 400px;
+  width: 400px;
+  background-color: black;
+  margin: 10px;
+}
+
+.serviceProduct__info:hover {
+  box-shadow: 0px 0px 5px 2px rgb(143, 146, 146);
+  transition: 0.4s;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+
+.serviceProdict__text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  justify-content: center;
+}
+
+.serviceProdict__text span {
+  font-size: 25px;
+}
+
+.serviceProdict__text p {
+  width: 300px;
+  font-size: 18px;
+}
+
+.webAsset__icon {
+  color: white;
+  margin: 20px;
+}
+
+.fas {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  background-color: black;
+  transition: 0.5s;
+}
+
+.fa-desktop {
+  color: white;
+}
+
+/* Project section */
+/* ############## */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+.project__top {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 60px;
+  color: white;
+  background-color: black;
+  padding-bottom: 50px;
+}
+
+.project__top h1 {
+  font-size: 40px;
+  font-family: "Lato", sans-serif;
+}
+
+.project__top p {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+
+.project__row01 {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+}
+
+.project__row02 {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+}
+
+.project__container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.image {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.6s ease;
+  background-color: black;
+}
+
+.project__container:hover .overlay {
+  opacity: 0.8;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+.project__text {
+  font-family: "Noto Sans", sans-serif;
+  color: white;
+  font-size: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 300px;
+  font-weight: 520;
+}
+
+.project__icon {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+  color: white;
+}
+
+.project__icon a {
+  color: white;
+}
+
+.far {
+  font-size: 28px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.far:hover {
+  opacity: 0.4;
+}
+
+/* Resume section */
+/* ############## */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+.resume__container {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 60px;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.resume__container h1 {
+  font-size: 40px;
+  font-family: "Lato", sans-serif;
+}
+
+.resume__container p {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+
+.resume__straight_line p {
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.resume__buttonRow {
+  margin-top: 30px;
+}
+
+.resume__button {
+  font-family: "Poppins", sans-serif;
+  border-radius: 4px;
+  background-color: #571ef4b6;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 22px;
+  padding: 20px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.resume__button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.resume__button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.resume__button:hover span {
+  padding-right: 25px;
+}
+
+.resume__button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Contact section */
+/* ############### */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+.contact__container {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 0px;
+}
+
+.contact__container h1 {
+  font-size: 40px;
+  font-family: "Lato", sans-serif;
+}
+
+.contact__container p {
+  font-size: 20px;
+  font-family: "Lato", sans-serif;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.contact__form {
+  border-radius: 5px;
+  background-color: black;
+  padding: 20px;
+  margin-top: 30px;
+  max-width: 1000px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Roboto", sans-serif;
+}
+
+.message__textarea {
+  font-family: "Roboto", sans-serif;
+  height: 200px;
+}
+
+#footer {
+  position: absolute;
+  font-family: monospace;
+  bottom: 1;
+  width: 100%;
+  text-align: left;
+  background-color: lightgray;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1100px) {
+  nav ul li a {
+    display: none;
+  }
+
+  .home__container {
+    position: relative;
+  }
+
+  .serviceProduct__row > * {
+    width: 740px;
+    height: 300px;
+    margin: 10px;
+    display: flex;
+  }
+  .serviceProduct__row {
+    display: table-cell;
+  }
+
+  .project__row01 > * {
+    height: fit-content;
+    width: fit-content;
+  }
+  .project__row01 {
+    display: table-cell;
+  }
+  .project__row02 > * {
+    height: fit-content;
+    width: fit-content;
+  }
+  .project__row02 {
+    display: table-cell;
+  }
+
+  .sidenav {
+    display: inherit;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  z-index: 1;
+  margin-top: 80px;
+  text-transform: uppercase;
+}
+
+.sidenav a:hover {
+  color: #e4717a;
+  transition: 0.5s;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
